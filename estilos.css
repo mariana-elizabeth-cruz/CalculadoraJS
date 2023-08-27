@@ -1,30 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
 body {
     padding: 0;
     margin: 0;
-    background: linear-gradient(to right, #00AAFF, #00ff6c);
+    background: linear-gradient(to bottom, #787ca7, #d48292);
 }
+
+/* Estilo titilo*/
+.sectionTitulo {
+    display: grid;
+    place-items: center;
+    margin: 50px;
+}
+
+.titulo {
+    width: 700px;
+    height: 300px;
+    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+    box-shadow: 5px 5px 20px #e81cff;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+
+.boxTitulo {
+    display: grid;
+    place-items: center;
+    width: 700px;
+    height: 300px;
+    background-color: #1a1a1a;
+    transition: all 0.9s;
+}
+
+h1 {
+    color: #ba52c6;
+    font-size: 100px;
+    letter-spacing: 8px;
+    font-family: "Indie Flower", cursive;
+}
+
+.boxTitulo:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+}
+
+.titulo:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px 1px #40c9ff;
+}
+
+h1:hover {
+    color: #5bb8dc;
+}
+/* fin titulo */
+
 /*Estilo para la calculadora*/
+.sectionCalcu {
+    display: grid;
+    place-items: center;
+}
+
+.colores {
+    width: 450px;
+    height: 620px;
+    border-radius: 1rem;
+    background-color: #4158d0;
+    background-image: linear-gradient(43deg,
+            #4158d0 0%,
+            #c850c0 46%,
+            #ffcc70 100%);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+        rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+        rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+        rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+        rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    margin: 30px;
+    padding: 30px;
+}
+
 /*le damos forma a la calculadora */
 .calculadora-grilla {
     display: grid;
     justify-content: center;
-    align-content:center;
-    min-height: 100vh;
+    align-content: center;
+    min-height: 90vh;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
+
 /*le aplicamos diseño a los numeros y simbolos*/
-.calculadora-grilla > button {
+.calculadora-grilla>button {
     cursor: pointer;
     font-size: 2rem;
     border: 1px solid white;
     outline: none;
-    background-color: rgba(255, 255, 255, .75);
+    background-color: rgba(255, 255, 255, 0.75);
+    transition: all 1s;
+    border-radius: 4px;
 }
+
 /*con output le damos estilo a la caja de salida*/
 .output {
     grid-column: 1 / -1;
-    background-color: rgba(0, 0, 0, .75);
+    background-color: #000000bf;
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
@@ -32,7 +109,7 @@ body {
     padding: 10px;
     word-wrap: break-word;
     word-wrap: break-all;
-    
+    border-radius: 6px;
 }
 
 .output .display {
@@ -40,27 +117,9 @@ body {
     font-size: 1.85rem;
     text-align: right;
 }
-/*al pasar el cursor sobre los botones cambian de color 
-hover = selecciona el boton al pasar el cursor*/
-.calculadora-grilla > button:hover{
-    background-color: rgba(255, 255,255, .9);
+
+.calculadora-grilla>button:hover {
+    background: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+    transform: scale(1);
 }
 /*fin estilos calculadra*/
-
-/*estilo titilo*/
-.titulo {
-    border-radius: 45px 45px 45px 45px ;
-    border: solid 1px rgb(0, 0, 0);
-    margin: 30px;
-    background: linear-gradient(to right, #13a0aa, #193c7e);
-    text-align: center;
-}
-
-h1 {
-    font-size: 100px;
-    text-shadow: 6px 3px 5px rgb(10, 29, 44);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 
-    'Trebuchet MS', sans-serif;
-}
-
-/*fin titulo*/
